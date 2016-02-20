@@ -7,15 +7,49 @@
 //
 
 import UIKit
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
+     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "InstagramParse"
+                configuration.clientKey = "ovt7f95td967of0gyp67ff65d548drdc6i4ed5iy608o"
+                configuration.server = "https://nameless-earth-17708.herokuapp.com/parse"
+            })
+        )
+      //   NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+        
+        
+        
+        // check if user is logged in.
+       if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+           let vc = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as UIViewController
+           window?.rootViewController = vc
+            
+      //
+       }
+        NSNotificationCenter.defaultCenter().addObserverForName("userDidLogout", object: nil, queue: NSOperationQueue.mainQueue()) { (NSNotification) -> Void in
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController()
+            self.window?.rootViewController = vc
+
+            
+        }
+        
         return true
     }
 
