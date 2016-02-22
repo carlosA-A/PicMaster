@@ -36,11 +36,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-s4-XVY">
-                                <rect key="frame" x="111" y="135" width="180" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuf-pk-r1I">
                                 <rect key="frame" x="20" y="83" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -53,6 +48,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-s4-XVY">
+                                <rect key="frame" x="111" y="135" width="180" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -97,15 +97,15 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-V3-i9r">
+                                                    <rect key="frame" x="67" y="23" width="240" height="128"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSp-9c-3cQ">
-                                                    <rect key="frame" x="67" y="159" width="54" height="18"/>
+                                                    <rect key="frame" x="67" y="159" width="293" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-V3-i9r">
-                                                    <rect key="frame" x="67" y="23" width="240" height="128"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="v22-ye-wO2" firstAttribute="top" secondItem="XTB-NT-QX5" secondAttribute="top" constant="6" id="1BV-Ic-LN4"/>
@@ -127,7 +127,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="mostViewed" id="At6-c5-Djn"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="At6-c5-Djn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="urh-HA-00R" id="P7H-3u-4jv"/>
@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="3809.5" y="239.5"/>
         </scene>
-        <!--Image Picker View Controller-->
+        <!--Pictures-->
         <scene sceneID="8Tw-wu-y5P">
             <objects>
                 <viewController id="qZY-Ni-S9S" customClass="ImagePickerViewController" customModule="Instagram2" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,38 +150,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLD-cW-8Fg">
-                                <rect key="frame" x="143" y="390" width="89" height="30"/>
+                                <rect key="frame" x="107" y="390" width="89" height="30"/>
                                 <state key="normal" title="Select Image"/>
                                 <connections>
                                     <action selector="onLoadPicker:" destination="qZY-Ni-S9S" eventType="touchUpInside" id="uGD-7J-5r3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgV-cN-h6f">
-                                <rect key="frame" x="67" y="123" width="240" height="168"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K9-a7-ojz">
-                                <rect key="frame" x="67" y="319" width="240" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-sD-ZIz">
-                                <rect key="frame" x="164" y="390" width="46" height="30"/>
+                                <rect key="frame" x="136" y="390" width="31" height="30"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="onPost:" destination="qZY-Ni-S9S" eventType="touchUpInside" id="F1g-3w-R5k"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="756" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgV-cN-h6f">
+                                <rect key="frame" x="51" y="123" width="240" height="168"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7K9-a7-ojz">
+                                <rect key="frame" x="51" y="319" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTp-dP-SPZ">
-                                <rect key="frame" x="67" y="78" width="240" height="30"/>
+                                <rect key="frame" x="51" y="78" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="AWX-B5-cSX"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="picture" id="AWX-B5-cSX"/>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="RU3-l5-1LA"/>
+                        <barButtonItem title="Camera" id="RU3-l5-1LA"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -197,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="3809.5" y="986.5"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="1no-Yk-vzu">
             <objects>
                 <viewController id="2d5-9N-EEY" customClass="ProfileViewController" customModule="Instagram2" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,23 +209,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOQ-dN-w8T">
-                                <rect key="frame" x="157" y="173" width="61" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogout:" destination="2d5-9N-EEY" eventType="touchUpInside" id="n8H-42-c4z"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N26-wb-jwe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N26-wb-jwe">
                                 <rect key="frame" x="157" y="103" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOQ-dN-w8T">
+                                <rect key="frame" x="105" y="191" width="164" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="2d5-9N-EEY" eventType="touchUpInside" id="n8H-42-c4z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N26-wb-jwe" firstAttribute="leading" secondItem="3qB-Qx-OQh" secondAttribute="leading" constant="157" id="AaR-KA-2Pz"/>
+                            <constraint firstItem="N26-wb-jwe" firstAttribute="top" secondItem="OZT-Zg-Gf7" secondAttribute="bottom" constant="39" id="EBd-Yh-BQo"/>
+                            <constraint firstItem="YOQ-dN-w8T" firstAttribute="leading" secondItem="3qB-Qx-OQh" secondAttribute="leading" constant="105" id="Gy4-hg-ojJ"/>
+                            <constraint firstAttribute="trailing" secondItem="N26-wb-jwe" secondAttribute="trailing" constant="157" id="QLN-jc-aKh"/>
+                            <constraint firstItem="YOQ-dN-w8T" firstAttribute="top" secondItem="N26-wb-jwe" secondAttribute="bottom" constant="67" id="ceJ-PP-sNq"/>
+                            <constraint firstAttribute="trailing" secondItem="YOQ-dN-w8T" secondAttribute="trailing" constant="106" id="fad-FW-IkI"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="TRY-J2-Ddu"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="TRY-J2-Ddu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="nameLabel" destination="N26-wb-jwe" id="0n3-eV-aGX"/>
@@ -274,4 +282,9 @@
             <point key="canvasLocation" x="3110" y="239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="picture" width="24" height="24"/>
+        <image name="user" width="24" height="24"/>
+    </resources>
 </document>
